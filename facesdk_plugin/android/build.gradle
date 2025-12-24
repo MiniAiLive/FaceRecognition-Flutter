@@ -1,0 +1,75 @@
+group 'com.kbyai.facesdk_plugin'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.9.22'
+    repositories {
+        google()
+        mavenCentral()  // Replaced jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()  // Replaced jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    namespace 'com.kbyai.facesdk_plugin'
+
+    compileSdkVersion 35  // Updated from 31 to 34
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17  // Updated from 1_8 to 17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'  // Updated from '1.8' to '17'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+    }
+
+    defaultConfig {
+        minSdkVersion 24
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+            testLogging {
+                events "passed", "skipped", "failed", "standardOut", "standardError"
+                outputs.upToDateWhen { false }
+                showStandardStreams = true
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'  // Updated from 1.7.0
+    implementation 'androidx.appcompat:appcompat:1.6.1'  // Kept same
+    implementation 'com.google.android.material:material:1.11.0'  // Updated from 1.8.0
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'  // Kept same
+
+    implementation project(":libfotoapparat")
+    implementation project(":libfacesdk")
+
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation 'org.mockito:mockito-core:5.11.0'  // Updated from 5.0.0
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

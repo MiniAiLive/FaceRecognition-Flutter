@@ -1,0 +1,49 @@
+name: facerecognition_flutter
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  url_launcher: ^6.3.0
+  cupertino_icons: ^1.0.2
+
+  facesdk_plugin:
+    path: ./facesdk_plugin
+
+  flutter_exif_rotation: ^0.5.1
+
+  # These were incorrectly inside dev_dependencies — FIXED
+  settings_ui: ^2.0.2
+  image_picker: ^1.1.2
+  sqflite: ^2.4.1
+  fluttertoast: ^8.2.4
+  shared_preferences: ^2.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/ic_skype.png
+    - assets/ic_telegram.png
+    - assets/ic_whatsapp.png
+    - assets/ic_github.png
+    - assets/logo_name.png
+
+    - assets/images/company_name.png
+    - assets/images/service2.png
+    - assets/images/enroll_face.png
+    - assets/images/verify_face.png
+    - assets/images/liveness_test.png
+    - assets/images/about_us.png
