@@ -5,6 +5,7 @@ This repository demonstrates both `face liveness detectio`n and `face recognitio
 
 > In this repository, we integrated `face liveness detection` and `face recognition` technology into this `Flutter` project for both `Android` and `iOS`.</br>
 
+## Latest SDK Download [Here](https://drive.google.com/file/d/1P2G46TcXQFLItHA5KFLxj66bCWpUeTHS/view?usp=drive_link)
 ## SDK License
 
 This repo integrated `face recognition SDK`, which requires a license for each `application ID`.</br>
