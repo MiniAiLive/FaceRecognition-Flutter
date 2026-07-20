@@ -24,7 +24,6 @@ This repo integrated `face recognition SDK`, which requires a license for each `
   flutter pub get
   flutter run
   ```  
-  If you plan to run the `iOS` app, please refer to the following [link](https://docs.flutter.dev/deployment/ios) for detailed instructions.</br>
 ### 3. Building the APK for Release
   To create a release `APK`, configure `ProGuard` as described in this file: /android/app/proguard-rules.pro 
   
