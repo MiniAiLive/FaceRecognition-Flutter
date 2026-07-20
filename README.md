@@ -97,4 +97,5 @@ This repo integrated `face recognition SDK`, which requires a license for each `
   To build the native camera screen and process face detection, please refer to the [lib/facedetectionview.dart] file in the repository. 
   
   This file contains the necessary code for implementing the camera screen and performing face detection.
-  
+## Contact US
+For any inquiries or questions, please contact us on [WhatsApp](https://wa.me/+15168245948).
